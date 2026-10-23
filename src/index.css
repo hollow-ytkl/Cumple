@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #000;
+    color: #f1f5f9;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-serif-vintage {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom animations */
+@keyframes vinylRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-vinyl {
+  animation: vinylRotate 3.5s linear infinite;
+}
+
+.animate-vinyl-paused {
+  animation-play-state: paused;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.3));
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 35px rgba(234, 179, 8, 0.6));
+  }
+}
+
+.animate-magic-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.2deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+@keyframes partyStrobe {
+  0% {
+    background-color: #0f172a;
+  }
+  20% {
+    background-color: #3b0764;
+  }
+  40% {
+    background-color: #1e1b4b;
+  }
+  60% {
+    background-color: #450a0a;
+  }
+  80% {
+    background-color: #042f2e;
+  }
+  100% {
+    background-color: #0f172a;
+  }
+}
+
+.animate-party-strobe {
+  animation: partyStrobe 4s linear infinite;
+}
+
+@keyframes rainbowBorder {
+  0% { border-color: #ef4444; }
+  25% { border-color: #eab308; }
+  50% { border-color: #10b981; }
+  75% { border-color: #3b82f6; }
+  100% { border-color: #ec4899; }
+}
+
+.animate-rainbow-border {
+  animation: rainbowBorder 3s linear infinite;
+}
+
+/* Custom scrollbar hiding */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

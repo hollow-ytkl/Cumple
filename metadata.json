@@ -1,0 +1,6 @@
+{
+  "name": "Para Catalina — Un Misterio Inolvidable",
+  "description": "Una experiencia interactiva cinematográfica, misteriosa y especial para el cumpleaños de Catalina.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
