@@ -43,12 +43,12 @@ interface MemoryRecord {
 
 // Los cuatro registros canónicos de Murder Drones
 // Cronología canónica:
-// 1º Ep 1: Piloto (K-01) -> Dígito 8
-// 2º Ep 3: The Promening (K-04) -> Dígito 6
-// 3º Ep 4: Cabin Fever (K-02) -> Dígito 1
-// 4º Ep 5: Home / Memories (K-07) -> Dígito 3
+// 1º Ep 1: Piloto (K-01) -> Dígito 1
+// 2º Ep 3: The Promening (K-04) -> Dígito 3
+// 3º Ep 4: Cabin Fever (K-02) -> Dígito 4
+// 4º Ep 5: Home / Memories (K-07) -> Dígito 5
 // Secuencia cronológica: K-01 -> K-04 -> K-02 -> K-07
-// Código final: 8 6 1 3
+// Código final: 1 3 4 5
 const INITIAL_RECORDS: MemoryRecord[] = [
   {
     id: 'K-04',
@@ -57,7 +57,7 @@ const INITIAL_RECORDS: MemoryRecord[] = [
     text: 'Una estudiante se infiltra en una celebración escolar. Una rival con poderes relacionados con el Solver se convierte en una pieza importante del conflicto.',
     question: '¿Qué acontecimiento de la serie describe este registro?',
     optionalHint: 'Ocurre en la pista de baile escolar. Doll revela poderes telequinéticos ante Uzi y N.',
-    associatedDigit: 6,
+    associatedDigit: 3,
     correctChronologicalIndex: 1,
     themeColor: 'from-purple-900/40 to-fuchsia-950/30 border-purple-500/40 text-purple-300',
   },
@@ -68,7 +68,7 @@ const INITIAL_RECORDS: MemoryRecord[] = [
     text: 'Una Worker Drone sale de su refugio y se encuentra con un Disassembly Drone. El encuentro altera los planes de ambos.',
     question: '¿Qué encuentro marca el inicio de esta historia?',
     optionalHint: 'Uzi se aventura al páramo helado fuera de las tres compuertas del búnker y conoce a N.',
-    associatedDigit: 8,
+    associatedDigit: 1,
     correctChronologicalIndex: 0,
     themeColor: 'from-amber-900/30 to-yellow-950/30 border-yellow-500/40 text-yellow-300',
   },
@@ -79,7 +79,7 @@ const INITIAL_RECORDS: MemoryRecord[] = [
     text: 'Los recuerdos conducen a una mansión humana. Las relaciones entre varios personajes y los orígenes de ciertos acontecimientos comienzan a revelarse.',
     question: '¿Qué episodio profundiza en esos recuerdos del pasado?',
     optionalHint: 'La Mansión Elliott en la Tierra. El pasado compartido de N, V, J y Cyn antes de Copper 9.',
-    associatedDigit: 3,
+    associatedDigit: 5,
     correctChronologicalIndex: 3,
     themeColor: 'from-rose-950/30 to-red-950/30 border-red-500/40 text-red-300',
   },
@@ -90,7 +90,7 @@ const INITIAL_RECORDS: MemoryRecord[] = [
     text: 'Un campamento escolar se convierte en un escenario peligroso. La conducta de Uzi comienza a mostrar señales preocupantes relacionadas con el Solver.',
     question: '¿Qué episodio presenta este incidente?',
     optionalHint: 'Campamento 98.7 entre la nieve. Uzi manifiesta alas biomecánicas y sed de aceite.',
-    associatedDigit: 1,
+    associatedDigit: 4,
     correctChronologicalIndex: 2,
     themeColor: 'from-violet-950/40 to-indigo-950/30 border-indigo-500/40 text-indigo-300',
   },
@@ -325,7 +325,7 @@ export const StageMurderDrones: React.FC<StageMurderDronesProps> = ({ onComplete
       return;
     }
 
-    if (rawInput === '8613') {
+    if (rawInput === '1345') {
       // ¡Éxito!
       setValidationError(null);
       soundEngine.playAccessGrantedCyber();
@@ -1074,7 +1074,7 @@ export const StageMurderDrones: React.FC<StageMurderDronesProps> = ({ onComplete
                   CÓDIGO DE DESBLOQUEO VERIFICADO
                 </div>
                 <div className="font-mono text-3xl font-black tracking-[0.3em] text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.8)]">
-                  8 6 1 3
+                  1 3 4 5
                 </div>
               </div>
 
@@ -1209,7 +1209,7 @@ export const StageMurderDrones: React.FC<StageMurderDronesProps> = ({ onComplete
           <span>SISTEMA COPPER 9 // AUTORIZACIÓN SOLVER</span>
         </div>
         <div className="font-mono text-neutral-600">
-          [ ABSOLUTE SOLVER INTERFACE // ENCRYPTED 8613 ]
+          [ ABSOLUTE SOLVER INTERFACE // ENCRYPTED 1345 ]
         </div>
       </footer>
     </div>
