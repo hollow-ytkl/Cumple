@@ -202,6 +202,10 @@ export const CONFIG = {
       tokens: ["fruna", "frunas", "frunita", "frunitas"],
       reaction: "estás muy muy cerca",
     },
+    trufa: {
+      tokens: ["trufa", "trufas", "trufita", "trufitas"],
+      reaction: "estás muy muy cerca",
+    },
   },
 
   // Temporizador oculto (en milisegundos). 60000 ms = 60 segundos

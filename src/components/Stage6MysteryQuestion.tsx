@@ -172,6 +172,16 @@ export const Stage6MysteryQuestion: React.FC<Stage6MysteryQuestionProps> = ({ on
       return { matchedCategory: 'fruna', reaction: 'estás muy muy cerca' };
     }
 
+    // TRUFAS (singular y plural, trufita/s)
+    if (
+      cleaned === 'trufa' ||
+      cleaned === 'trufas' ||
+      cleaned === 'trufita' ||
+      cleaned === 'trufitas'
+    ) {
+      return { matchedCategory: 'trufa', reaction: 'estás muy muy cerca' };
+    }
+
     return null;
   };
 
